@@ -1,0 +1,36 @@
+{
+  "name": "spec-pax",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "author": "André Baltazar",
+  "engines": {
+    "node": ">=24"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndreBaltazar8/spec-pax.git"
+  },
+  "description": "PAX numeric version 0 file format specification and portable decoding reference",
+  "exports": {
+    ".": "./src/format.js",
+    "./*": "./src/*.js"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "meshoptimizer": "1.2.0",
+    "ktx-parse": "2.0.0"
+  },
+  "files": [
+    "src",
+    "fixtures",
+    "SPECIFICATION.md",
+    "docs",
+    "LICENSE",
+    "README.md",
+    "manifest.schema.json",
+    "SHARED_CODE.md"
+  ]
+}

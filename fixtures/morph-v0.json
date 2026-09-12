@@ -1,0 +1,230 @@
+{
+  "version": 0,
+  "features": [
+    "primitive-modes",
+    "final-order"
+  ],
+  "conversionSettings": {
+    "textureBaseSize": 128,
+    "geometryBaseRatio": 0.015,
+    "adaptive": true,
+    "initialQuality": "balanced",
+    "geometryCodec": "auto",
+    "textureTiles": true,
+    "tileSize": 256
+  },
+  "name": "TestMorph",
+  "levels": 6,
+  "sourceBytes": 55588,
+  "sourceSHA256": "08559b003ee438d3d3f2fec8a50bdd16a6c9eeac1f252c82ef9ea80a395ce939",
+  "animations": 1,
+  "extensionStrategies": [],
+  "primitives": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "indexWidth": 3,
+      "originalMode": 4,
+      "instances": [
+        {
+          "mesh": 0,
+          "primitive": 0
+        }
+      ],
+      "finalVertices": 825,
+      "finalTriangles": 1472,
+      "baseVertices": 57,
+      "baseTriangles": 54,
+      "levels": 6,
+      "quality": [
+        {
+          "error": 0.7261649370193481,
+          "ratio": 0.015,
+          "primitives": 54
+        },
+        {
+          "error": 0.1504817008972168,
+          "ratio": 0.065,
+          "estimatedBytes": 5044,
+          "errorGain": 0.7927720091872085,
+          "primitives": 94
+        },
+        {
+          "error": 0.0219621229916811,
+          "ratio": 0.16,
+          "estimatedBytes": 10212,
+          "errorGain": 0.8540545271568811,
+          "primitives": 235
+        },
+        {
+          "error": 0.01220276951789856,
+          "ratio": 0.35,
+          "estimatedBytes": 20348,
+          "errorGain": 0.4443720435168871,
+          "primitives": 515
+        },
+        {
+          "error": 0.006011961959302425,
+          "ratio": 0.68,
+          "estimatedBytes": 37508,
+          "errorGain": 0.5073280741323265,
+          "primitives": 999
+        },
+        {
+          "error": 0,
+          "ratio": 1,
+          "primitives": 1472
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "attributes": [
+        {
+          "semantic": "POSITION",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "NORMAL",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "TEXCOORD_0",
+          "componentType": 5126,
+          "itemSize": 2,
+          "normalized": false
+        },
+        {
+          "semantic": "POSITION",
+          "morph": 0,
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        }
+      ]
+    }
+  ],
+  "textures": [],
+  "maxOverhead": 0.05,
+  "textureMode": "budgeted lossless sample lattice; exact source image fallback",
+  "geometryMode": "adaptive attribute-aware stages; lossless blocks and triangle patches",
+  "animationMode": "complete original clips in bootstrap",
+  "bootstrapExtensionPackets": 0,
+  "streamBytes": 24879,
+  "bootstrapBytes": 2668,
+  "baseGLBBytes": 4764,
+  "geometryPatchBytes": 22394,
+  "texturePayloadBytes": 0,
+  "latticeTextures": 0,
+  "sourceTextures": 0,
+  "overheadPercent": -55.24393754047636,
+  "sizeBudgetBytes": 58367,
+  "packets": 8,
+  "directoryBytes": 320,
+  "geometryCodecStats": [
+    {
+      "primitive": 0,
+      "level": 1,
+      "raw": 1508,
+      "selected": 1354,
+      "codecs": {
+        "raw": 4,
+        "sequence": 1,
+        "meshopt": 1
+      },
+      "packetCodec": "blocks"
+    },
+    {
+      "primitive": 0,
+      "level": 2,
+      "raw": 3385,
+      "selected": 2970,
+      "codecs": {
+        "raw": 3,
+        "meshopt": 2,
+        "delta": 1
+      },
+      "packetCodec": "blocks"
+    },
+    {
+      "primitive": 0,
+      "level": 3,
+      "raw": 5720,
+      "selected": 4920,
+      "codecs": {
+        "raw": 3,
+        "meshopt": 2,
+        "sequence": 1
+      },
+      "packetCodec": "blocks"
+    },
+    {
+      "primitive": 0,
+      "level": 4,
+      "raw": 9923,
+      "selected": 8008,
+      "codecs": {
+        "raw": 3,
+        "meshopt": 2,
+        "sequence": 1
+      },
+      "packetCodec": "blocks"
+    },
+    {
+      "primitive": 0,
+      "level": 5,
+      "raw": 11630,
+      "selected": 7895,
+      "codecs": {
+        "raw": 3,
+        "meshopt": 2,
+        "sequence": 2
+      },
+      "packetCodec": "blocks"
+    }
+  ],
+  "verification": {
+    "primitives": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "attributes": [
+          {
+            "semantic": "POSITION",
+            "hash": "783719ed282b9acc6eeed6e300cb3cbdc61670168ab472ae435ddd09dff7e54c"
+          },
+          {
+            "semantic": "NORMAL",
+            "hash": "783719ed282b9acc6eeed6e300cb3cbdc61670168ab472ae435ddd09dff7e54c"
+          },
+          {
+            "semantic": "TEXCOORD_0",
+            "hash": "c76f83c0ce03387df391e411bd55d3ac1f714ecadc5f0cb99078b915065c173f"
+          },
+          {
+            "semantic": "POSITION",
+            "morph": 0,
+            "hash": "f34aea5b7a9482a5a86fa578f9b13cc7e03c32602276958c803b558428b04270"
+          }
+        ],
+        "finalIndicesHash": "f2fa1f559348c0e2330939a2529dcba8093a0ca38545d43704af5f6fbcad7388",
+        "originalVertices": 825,
+        "originalTriangles": 1472
+      }
+    ],
+    "textures": []
+  }
+}
