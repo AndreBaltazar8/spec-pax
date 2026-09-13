@@ -1,29 +1,36 @@
 # spec-pax
 
-The complete specification and portable decoding reference for **PAX numeric file
-format version 0**: progressively stream a 3D scene, reuse early geometry and
-texture data, and render before the full asset arrives.
+Specification and reference decoder for **PAX v0**, a 3D asset format that reuses
+initial geometry and texture data as detail arrives. Animation clips load in the
+bootstrap.
 
-Read [SPECIFICATION.md](SPECIFICATION.md) for the binary header, packet directory,
-checksums, geometry codecs, texture tiles and GPU mips, extension dependencies,
-random access, completion rules and fidelity boundaries.
+Read [SPECIFICATION.md](SPECIFICATION.md) for the binary layout, packets,
+checksums, codecs, extensions, random access and completion rules.
 
-- [convert-pax](https://github.com/AndreBaltazar8/convert-pax): converter and size/fidelity verification.
-- [three-pax](https://github.com/AndreBaltazar8/three-pax): Three.js loader and runnable comparison samples.
+## Format
+
+- The file version is a `uint32` at byte offset 4, currently **0**. Package versions
+  are separate. Legacy `PAX1` files require reconversion.
+- Previews are approximate. Final data is lossless within the
+  [defined profile](SPECIFICATION.md#10-encoder-profile-and-fidelity).
+- The converter limits the complete file to **105% of the source size** and rejects
+  inputs that cannot fit.
+- PAX is experimental, not an established standard.
+
+## Reference implementation
+
+`src/` contains decoding algorithms. `fixtures/` contains a generated morph asset
+and reconstruction hashes.
 
 ```sh
 npm ci
 npm test
 ```
 
-The numeric wire version lives in a uint32 at byte offset 4. It is currently **0**;
-package semantic versions do not identify the file format. Legacy `PAX1` files
-must be reconverted. This is a research format, not an established standard.
+## Related projects
 
-`src/` contains portable decoding algorithms; `fixtures/` contains a small generated
-morph fixture with conversion proof metadata. The converter enforces a maximum
-whole-file size of 105% of the original input and rejects inputs that cannot fit.
-Final decoded data is lossless within the [defined profile](SPECIFICATION.md#10-encoder-profile-and-fidelity);
-intermediate stages are approximate. Animation clips arrive in the bootstrap.
+- [convert-pax](https://github.com/AndreBaltazar8/convert-pax): glTF/GLB converter.
+- [three-pax](https://github.com/AndreBaltazar8/three-pax): Three.js loader and samples.
+- [blender-pax](https://github.com/AndreBaltazar8/blender-pax): Blender import/export.
 
-Code and generated fixture: MIT.
+Code and generated fixture: [MIT](LICENSE).
